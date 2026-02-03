@@ -87,7 +87,7 @@ export default function Home() {
       {/* Header */}
       <header className="bg-black/30 backdrop-blur-sm border-b border-white/10 p-4">
         <h1 className="text-2xl font-bold text-white">Ian'ch Portfolio Chat</h1>
-        <p className="text-gray-400 text-sm">Powered by Gemini 2.5 Flash ⚡</p>
+        {/* <p className="text-gray-400 text-sm">Powered by Gemini 2.5 Flash ⚡</p> */}
       </header>
 
       {/* Messages */}
