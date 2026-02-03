@@ -19,7 +19,8 @@ app.add_middleware(
 
 # Configure Gemini
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-model = genai.GenerativeModel('gemini-2.0-flash-exp')
+# model = genai.GenerativeModel('gemini-2.0-flash-exp')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 CV_CONTEXT = """
 
@@ -174,10 +175,14 @@ Business Intelligence, Spatial OLAP, Data Engineering, Bases de données spatial
 
 ----------------------------
 Mes hobbies : 
-Apprenti chef de choeur au conservatoire du 18e arrondissement de paris dans la classe d'Ariel Alonzo
+Choriste dans différent ensemble comme le choeur de l'Oratoire du Louvre, SQUILLO, MELANGE
 Apprenti Chanteur lyrique, prend des cours de chants avec Sophie Hérvé
-Choriste dans différent ensemble comme SQUILLO, MELANGE
+Apprenti chef de choeur au conservatoire du 18e arrondissement de paris dans la classe d'Ariel Alonzo
 joue de la guitare/piano
+
+Concert en cours de préparation : 
+Concert SQUILLO le 06 fevrier 2026
+Preparation SQUILLO BACH le 14 fevrier 2026
 """
 
 SYSTEM_PROMPT = f"""Tu es l'assistant personnel d'Ian'ch, un data consultant basé à Paris.
@@ -212,34 +217,71 @@ class ChatRequest(BaseModel):
 def read_root():
     return {"status": "API Portfolio Chat - Online"}
 
+# @app.post("/chat")
+# async def chat(request: ChatRequest):
+#     try:
+#         # Construire l'historique pour Gemini
+#         chat_history = []
+#         for msg in request.messages[:-1]:  # Tous sauf le dernier
+#             chat_history.append({
+#                 "role": "user" if msg.role == "user" else "model",
+#                 "parts": [msg.content]
+#             })
+        
+#         # Créer le chat avec historique
+#         chat = model.start_chat(
+#             history=chat_history
+#         )
+        
+#         # Envoyer le message avec le system prompt inclus
+#         user_message = request.messages[-1].content
+#         full_prompt = f"{SYSTEM_PROMPT}\n\nQuestion: {user_message}"
+        
+#         response = chat.send_message(full_prompt)
+        
+#         return {
+#             "response": response.text,
+#             "model": "gemini-2.0-flash-exp"
+#         }
+        
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail=str(e))
+
 @app.post("/chat")
 async def chat(request: ChatRequest):
     try:
+        print("=== Début du traitement ===")
+        print(f"Messages reçus: {len(request.messages)}")
+        
         # Construire l'historique pour Gemini
         chat_history = []
-        for msg in request.messages[:-1]:  # Tous sauf le dernier
+        for msg in request.messages[:-1]:
+            print(f"Ajout message: {msg.role}")
             chat_history.append({
                 "role": "user" if msg.role == "user" else "model",
                 "parts": [msg.content]
             })
         
-        # Créer le chat avec historique
-        chat = model.start_chat(
-            history=chat_history
-        )
+        print("=== Création du chat ===")
+        chat = model.start_chat(history=chat_history)
         
-        # Envoyer le message avec le system prompt inclus
+        print("=== Envoi du message ===")
         user_message = request.messages[-1].content
         full_prompt = f"{SYSTEM_PROMPT}\n\nQuestion: {user_message}"
         
         response = chat.send_message(full_prompt)
         
+        print("=== Succès ===")
         return {
             "response": response.text,
             "model": "gemini-2.0-flash-exp"
         }
         
     except Exception as e:
+        print(f"❌ ERREUR: {e}")
+        print(f"Type: {type(e)}")
+        import traceback
+        traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/health")
