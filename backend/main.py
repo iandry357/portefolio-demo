@@ -174,9 +174,9 @@ Business Intelligence, Spatial OLAP, Data Engineering, Bases de données spatial
 
 ----------------------------
 Mes hobbies : 
-Apprenti chef de choeur
-Apprenti Chanteur lyrique 
-Choriste amateur
+Apprenti chef de choeur au conservatoire du 18e arrondissement de paris dans la classe d'Ariel Alonzo
+Apprenti Chanteur lyrique, prend des cours de chants avec Sophie Hérvé
+Choriste dans différent ensemble comme SQUILLO, MELANGE
 joue de la guitare/piano
 """
 
