@@ -36,7 +36,9 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8000/chat', {
+      // portefolio-demo-production.up.railway.app
+      const response = await fetch('https://portefolio-demo-production.up.railway.app//chat', {
+      // const response = await fetch('http://localhost:8000/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
