@@ -175,14 +175,23 @@ Business Intelligence, Spatial OLAP, Data Engineering, Bases de données spatial
 
 ----------------------------
 Mes hobbies : 
-Choriste dans différent ensemble comme le choeur de l'Oratoire du Louvre, SQUILLO, MELANGE
-Apprenti Chanteur lyrique, prend des cours de chants avec Sophie Hérvé
-Apprenti chef de choeur au conservatoire du 18e arrondissement de paris dans la classe d'Ariel Alonzo
-joue de la guitare/piano
+Choriste dans différent ensemble : 
+choeur de l'Oratoire du Louvre depuis 2019
+SQUILLO depuis 2025 
+MELANGE depuis 2024
+Divertissements depuis 2026
+COGE entre 2022 - 2025
+Apprenti Chanteur lyrique, prend des cours de chants avec Sophie Hérvé depuis 2022
+Apprenti chef de choeur au conservatoire du 18e arrondissement de paris dans la classe d'Ariel Alonzo depuis 2023
+Joue de la guitare avec un niveau modeste depuis 2006
+Joue du piano, arrive à s'accompagnier en chantant ou en dechiffrant une partition depuis 2010 
+A étudié la musique dans l'AMI, une institut de musique koreene à madagascar
+choeur AMBOARAMPEO Tranovato Faravohitra à madagascar
 
 Concert en cours de préparation : 
-Concert SQUILLO le 06 fevrier 2026
-Preparation SQUILLO BACH le 14 fevrier 2026
+Concert SQUILLO le 06 fevrier 2026 sur un programme "Sacré Swing"
+Master avec l'ensemble SQUILLO pour monter une oeuvre de BACH. Répétition le 14 fevrier 2026
+Stage de pédagogie de la voix avec Sophie Hérvé le 22-23-24-25 Février 2026
 """
 
 SYSTEM_PROMPT = f"""Tu es l'assistant personnel d'Ian'ch, un data consultant basé à Paris.
