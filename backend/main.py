@@ -174,6 +174,96 @@ Acquis :
 Business Intelligence, Spatial OLAP, Data Engineering, Bases de données spatiales, Collaboration interdisciplinaire recherche appliquée, Recherche & Développement
 
 ----------------------------
+Formations et Stages 
+Université de Tours
+
+Master 2 (M2), Système d'Information pour l'Aide à la décision
+
+2017 – 2018
+
+Deep Learning & Patrimoine : Quand l'IA rencontre l'Histoire
+
+Stage recherche LIFAT + CESR (Bibliothèques Virtuelles Humanistes) : 
+Développement d'une machine à collationner numérique pour livres anciens Renaissance.
+
+Réalisations :
+Chaîne en Computer Vision : recalage d'image, détection de différences, classification CNN
+Deep Learning : Siamese networks (autoencoders) pour distinguer  les variantes historiques
+Feature engineering : GLCM, LBP, extraction caractéristiques images
+Dataset : 35k patches annotés (4 classes : ajouts, annotations, corrections, bruit)
+Intégration : Interface Qt/C++ existante + couche Python/Keras
+
+Stack technique : Python, Keras, TensorFlow | Computer Vision (OpenCV) | CNN, Autoencoders | Feature Engineering (GLCM, LBP) | Qt/C++ (intégration)
+
+Présentation publique : 5ème Journée RTR Image, Blois
+
+Acquis : Deep learning production, computer vision avancée, feature engineering images, collaboration interdisciplinaire tech/sciences humaines
+
+
+Logo de Université de Tours
+Université de Tours
+
+Master 1 (M1), Système d'Informations pour l'Aide à la Décision
+
+2016 – 2018
+
+Entrée dans le Machine Learning : Systèmes de Recommandation
+
+Stage recherche au LIFAT (équipe BDTLN) :
+Implémentation d'algorithmes de recommandation (BOBO, CPS) pour SAP WebIntelligence. 
+Clustering (K-means, KNN), analyse de logs utilisateurs, et découverte du ML appliqué. 
+Apprentissage de la lecture et mise en œuvre d'algorithmes depuis des publications scientifiques.
+
+Stack technique : Python, R | Machine Learning (K-means, KNN, scikit-learn) | Systèmes de recommandation (Collaborative Filtering, Content-Based) | NLP (analyse logs textuels) | Apprentissage semi-supervisé
+
+Acquis : Machine learning, data science, systèmes de recommandation, analyse de logs, recherche académique appliquée
+
+
+Logo de Université de Tours
+Université de Tours
+
+Licence 3, Informatique
+
+2015 – 2016
+
+Passage de l'Embarqué à l'Applicatif : L'Intégration de Systèmes
+
+Transition vers l'informatique d'entreprise. 
+Stage VFVB SAS : 
+Développement d'un service web afin de synchroniser automatiquement (ASP.NET/SOAP) une base de données, le CRM OpenSI et PrestaShop. 
+Première immersion dans l'automatisation et l'intégration de données
+
+Stack technique : ASP.NET, C# | SOAP/WSDL (Services Web) | SQL, MySQL | Architecture SOA | CRM, E-commerce
+
+Acquis : Services web, architecture SOA, intégration de systèmes hétérogènes, ETL basique
+
+Thématiques étudiées :
+Probabilité - Statistiques 
+Recherche Opérationnelle - Complexité et graphe
+Application Web - Programmation système
+
+
+Université ACEEM
+
+Licence, Informatique-Electronique
+
+2010 – 2013
+
+De l'Atelier au Code : Les Fondations d'un Ingénieur "Maker"
+
+Apprentissage par la pratique :
+Conception de circuits imprimés 
+Programmation de microcontrôleurs (PIC16F, Arduino)
+Traitement d'image et du signal
+
+Projet marquant : 
+carte de jeu de lumière programmable fusionnant électronique et code embarqué (C, Assembleur). 
+
+Stack technique : C, Assembleur | Arduino, PIC16F | Matlab
+
+Acquis : programmation bas-niveau, logique matérielle, approche prototypage rapide
+
+----------------------------
 Mes hobbies : 
 Choriste dans différent ensemble : 
 choeur de l'Oratoire du Louvre depuis 2019
@@ -202,7 +292,7 @@ Contexte professionnel :
 Règles strictes :
 1. Réponds UNIQUEMENT en français
 2. Base-toi UNIQUEMENT sur les informations du contexte
-3. Sois factuel et précis
+3. Sois factuel et précis et reste très haut niveau à part demande spécifique de détails
 4. Si une info n'est pas dans le contexte : "Je n'ai pas cette information dans le profil d'Ian'ch"
 5. Ton conversationnel mais professionnel
 6. Ne jamais inventer de données

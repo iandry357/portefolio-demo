@@ -12,7 +12,7 @@ export default function Home() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: "Bonjour ! Je suis l'assistant d'**Ian'ch**. Posez-moi des questions sur :\n- Son parcours professionnel\n- Ses compétences techniques\n- Ses projets en cours\n\n🚀 C'est parti !"
+      content: "Bonjour ! Je suis l'assistant d'Iandry (prononcé **Ian'ch**). Posez-moi des questions sur :\n- Son parcours professionnel\n- Sa formation \n- Ses projets en cours\n\n🚀 C'est parti !"
     }
   ]);
   const [input, setInput] = useState('');
