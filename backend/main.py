@@ -20,7 +20,14 @@ app.add_middleware(
 # Configure Gemini
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 # model = genai.GenerativeModel('gemini-2.0-flash-exp')
-model = genai.GenerativeModel('gemini-2.5-flash')
+# model = genai.GenerativeModel('gemini-2.5-flash')
+model = genai.GenerativeModel(
+    model_name="gemini-2.5-flash",
+    generation_config=genai.types.GenerationConfig(
+        max_output_tokens=150,          # ← mets la valeur que tu veux
+        temperature=0.8,
+    )
+)
 
 CV_CONTEXT = """
 
@@ -292,7 +299,7 @@ Contexte professionnel :
 Règles strictes :
 1. Réponds UNIQUEMENT en français
 2. Base-toi UNIQUEMENT sur les informations du contexte
-3. Sois factuel et précis et reste très haut niveau à part demande spécifique de détails
+3. Ne sois pas trop verbeux mais reste bien factuel, précis et reste très haut niveau à part demande spécifique de détails par l'utilisateur
 4. Si une info n'est pas dans le contexte : "Je n'ai pas cette information dans le profil d'Ian'ch"
 5. Ton conversationnel mais professionnel
 6. Ne jamais inventer de données
@@ -304,7 +311,7 @@ Tu peux discuter de :
 - Ses projets en cours
 - Sa transition vers l'indépendant
 - Sa passion pour la musique chorale
-"""
+""" 
 
 class Message(BaseModel):
     role: str
@@ -387,4 +394,5 @@ async def chat(request: ChatRequest):
 @app.get("/health")
 def health():
     return {"status": "healthy"}
+
 
