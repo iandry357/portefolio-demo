@@ -24,7 +24,7 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 model = genai.GenerativeModel(
     model_name="gemini-2.5-flash",
     generation_config=genai.types.GenerationConfig(
-        max_output_tokens=150,          # ← mets la valeur que tu veux
+        max_output_tokens=800,          # ← mets la valeur que tu veux
         temperature=0.8,
     )
 )
