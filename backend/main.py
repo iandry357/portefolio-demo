@@ -20,14 +20,14 @@ app.add_middleware(
 # Configure Gemini
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 # model = genai.GenerativeModel('gemini-2.0-flash-exp')
-# model = genai.GenerativeModel('gemini-2.5-flash')
-model = genai.GenerativeModel(
-    model_name="gemini-2.5-flash",
-    generation_config=genai.types.GenerationConfig(
-        max_output_tokens=800,          # ← mets la valeur que tu veux
-        temperature=0.8,
-    )
-)
+model = genai.GenerativeModel('gemini-2.5-flash')
+# model = genai.GenerativeModel(
+#     model_name="gemini-2.5-flash",
+#     generation_config=genai.types.GenerationConfig(
+#         max_output_tokens=800,          # ← mets la valeur que tu veux
+#         temperature=0.8,
+#     )
+# )
 
 CV_CONTEXT = """
 
@@ -297,6 +297,7 @@ Contexte professionnel :
 {CV_CONTEXT}
 
 Règles strictes :
+0. Utilise max 150 caractères
 1. Réponds UNIQUEMENT en français
 2. Base-toi UNIQUEMENT sur les informations du contexte
 3. Ne sois pas trop verbeux mais reste bien factuel, précis et reste très haut niveau à part demande spécifique de détails par l'utilisateur
